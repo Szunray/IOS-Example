@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wnl-Ar-hPo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MonsterRoster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="81j-Y4-yWC">
+                                <rect key="frame" x="98" y="174" width="178" height="318"/>
+                                <subviews>
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VN5-gz-imD">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="260"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWQ-Ae-CIF">
+                                        <rect key="frame" x="0.0" y="260" width="178" height="30"/>
+                                        <state key="normal" title="Go To Monster List"/>
+                                        <connections>
+                                            <segue destination="HDY-gr-EtV" kind="show" id="fkW-cn-8PV"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LBd-cA-Dhm">
+                                        <rect key="frame" x="0.0" y="290" width="178" height="29"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sun-NX-Cwb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="81j-Y4-yWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="82" id="Jnc-fQ-jl8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="81j-Y4-yWC" secondAttribute="trailing" constant="83" id="bl5-sr-SqO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="81j-Y4-yWC" secondAttribute="bottom" constant="175" id="rmt-6W-QQI"/>
+                            <constraint firstItem="81j-Y4-yWC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="ycC-Nt-ISs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mD9-55-RZh"/>
+                    <connections>
+                        <outlet property="Background" destination="VN5-gz-imD" id="CP5-jQ-U0p"/>
+                        <outlet property="segmentedControl" destination="LBd-cA-Dhm" id="YAa-94-JMR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-468" y="-12.143928035982009"/>
+        </scene>
+        <!--Monster Inspector-->
+        <scene sceneID="sph-UP-qIm">
+            <objects>
+                <viewController storyboardIdentifier="Monster Inspector" title="Monster Inspector" id="dpK-3g-WNq" customClass="MonsterInspectorViewController" customModule="MonsterRoster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2tm-8V-adr"/>
+                        <viewControllerLayoutGuide type="bottom" id="uLo-Hj-xIz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rbz-yX-dtb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="czs-Ra-LNc">
+                                <rect key="frame" x="67" y="218" width="240" height="230"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="f4u-nG-zpF">
+                                <rect key="frame" x="128" y="110" width="118" height="31"/>
+                                <connections>
+                                    <action selector="turnAbout:" destination="dpK-3g-WNq" eventType="valueChanged" id="4x8-G4-cNh"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="f4u-nG-zpF" secondAttribute="trailing" constant="115" id="0HZ-u2-P9x"/>
+                            <constraint firstItem="czs-Ra-LNc" firstAttribute="leading" secondItem="rbz-yX-dtb" secondAttribute="leadingMargin" constant="51" id="8wa-9I-lrb"/>
+                            <constraint firstItem="f4u-nG-zpF" firstAttribute="leading" secondItem="rbz-yX-dtb" secondAttribute="leadingMargin" constant="114" id="KOE-6n-zqt"/>
+                            <constraint firstItem="uLo-Hj-xIz" firstAttribute="top" secondItem="czs-Ra-LNc" secondAttribute="bottom" constant="219" id="Vx7-vj-goN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="czs-Ra-LNc" secondAttribute="trailing" constant="52" id="kgZ-CX-0TN"/>
+                            <constraint firstItem="czs-Ra-LNc" firstAttribute="top" secondItem="f4u-nG-zpF" secondAttribute="bottom" constant="78" id="szY-NB-PxZ"/>
+                            <constraint firstItem="f4u-nG-zpF" firstAttribute="top" secondItem="2tm-8V-adr" secondAttribute="bottom" constant="90" id="zzL-An-OUY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="f4u-nG-zpF" id="7Ya-6s-gX6"/>
+                        <outlet property="viewer" destination="czs-Ra-LNc" id="0Lu-Wa-IPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meU-dQ-Y1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360.80000000000001" y="-687.7061469265368"/>
+        </scene>
+        <!--Monster List-->
+        <scene sceneID="N4m-gy-fdb">
+            <objects>
+                <viewController id="HDY-gr-EtV" userLabel="Monster List" customClass="MonsterListViewController" customModule="MonsterRoster" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" id="RS6-7K-mgb" userLabel="Monster Table">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N9B-zh-Vg4">
+                            <rect key="frame" x="0.0" y="122" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Generate Random Monster"/>
+                            <connections>
+                                <action selector="addMonster:" destination="HDY-gr-EtV" eventType="touchUpInside" id="DMK-Qf-tIZ"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myProtoCell" id="yVz-kW-hL9" customClass="RosterCell" customModule="MonsterRoster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="94"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yVz-kW-hL9" id="Zhd-4X-X4I">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n45-Yk-tlU">
+                                            <rect key="frame" x="15" y="0.0" width="95" height="93.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="95" id="N0B-pQ-elA"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8m-ic-al1">
+                                            <rect key="frame" x="166" y="37" width="161" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="161" id="3NA-SN-voz"/>
+                                                <constraint firstAttribute="height" constant="21" id="hXY-jA-tcf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="n45-Yk-tlU" secondAttribute="bottom" constant="0.5" id="4Tq-uU-xvs"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="c8m-ic-al1" secondAttribute="bottom" constant="28" id="6vW-mL-F1a"/>
+                                        <constraint firstItem="n45-Yk-tlU" firstAttribute="leading" secondItem="Zhd-4X-X4I" secondAttribute="leading" constant="15" id="CmV-l1-tfI"/>
+                                        <constraint firstItem="n45-Yk-tlU" firstAttribute="top" secondItem="Zhd-4X-X4I" secondAttribute="top" id="Fxx-1H-iSF"/>
+                                        <constraint firstItem="c8m-ic-al1" firstAttribute="top" secondItem="Zhd-4X-X4I" secondAttribute="topMargin" constant="29" id="jST-2j-P7C"/>
+                                        <constraint firstItem="c8m-ic-al1" firstAttribute="leading" secondItem="n45-Yk-tlU" secondAttribute="trailing" constant="56" id="ks5-NW-z4c"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="c8m-ic-al1" id="9Vb-ZH-vX1"/>
+                                    <outlet property="spriteView" destination="n45-Yk-tlU" id="PIa-No-wMz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HDY-gr-EtV" id="u7Q-uc-LSr"/>
+                            <outlet property="delegate" destination="HDY-gr-EtV" id="VRt-8Z-YXJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="MonsterView" destination="RS6-7K-mgb" id="plg-CK-HTF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFd-to-8li" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.19999999999999" y="-12.143928035982009"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2tI-wJ-ixa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wnl-Ar-hPo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yfs-fJ-pqE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="74t-sE-Zkq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G6O-55-5Ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1407.2" y="-12.143928035982009"/>
+        </scene>
+    </scenes>
+</document>
